@@ -1,0 +1,92 @@
+ @import url('https://fonts.googleapis.com/css?family=Lato');
+
+ * {
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ }
+
+ body {
+ 	font-family: 'Lato', sans-serif;
+ 	font-size: 16px;
+ 	margin-top: 30px;
+ 	margin-left: 10px;
+ }
+
+ .tabComponent {
+ 	position: relative;
+ 	min-height: 200px;
+ 	width: 650px;
+ 	color: #fff;
+ }
+
+ .tabs {
+ 	float: left;
+ }
+
+ .tabs input[type="radio"] {
+ 	display: none;
+ }
+
+ .tabs label {
+ 	position: relative;
+ 	padding: 10px 25px; 
+ 	left: 1px;
+ 	margin-left: -5px; 
+ 	background: #b3b3b3;
+ 	border-top: 3px solid rgba(0,0,0,0.2);
+ 	text-transform: capitalize;
+ 	font-size: 18px;
+ 	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+ }
+
+ .tabContent {
+ 	position: absolute;
+ 	top: 32px;
+ 	left: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	padding: 23px;
+ 	background: #fff;
+ 	box-shadow: inset 0 -10px 10px -10px #000000;
+ }
+
+ #homeDecor ~ label {
+ 	margin-left: -1px;
+ }
+
+ #homeDecor ~ label,
+ #homeDecor ~ label ~ .tabContent {
+ 	background: #00bf8c;
+ }
+
+ #furniture ~ label,
+ #furniture ~ label ~ .tabContent {
+ 	background: #ea5080;
+ }
+
+ #kitchen ~ label,
+ #kitchen ~ label ~ .tabContent {
+ 	background: #52bddf;
+ }
+
+ #clearance ~ label,
+ #clearance ~ label ~ .tabContent {
+ 	background: #efbc42;
+ }
+
+ .tabs input[type="radio"]:checked ~ label {
+ 	padding: 15px 35px;  
+ 	font-size: 21px;
+ 	-webkit-transition: font 0.3s ease;
+ 	transition: font 0.3s ease;
+ 	-webkit-transform: scale(1);
+ 	transform: scale(1);
+ 	z-index: 3;
+ }
+
+ .tabs input[type="radio"]:checked ~ label ~ .tabContent {
+ 	background: #1270a7;
+ 	color: white;
+ 	z-index: 2;
+ }
